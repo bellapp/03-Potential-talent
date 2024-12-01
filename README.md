@@ -46,7 +46,14 @@ start.bat
 ## 📁 Project Structure
 
 ```
-potential-talents/├── app/│   ├── app.py│   └── requirements.txt├── docker/│   └── Dockerfile.streamlit├── docker-compose.yml├── start.bat└── stop.bat
+potential-talents/  ├── app/│   
+                        ├── app.py│   
+                        └── requirements.txt
+                    ├── docker/│   
+                        └── Dockerfile.streamlit
+                    ├── docker-compose.yml
+                    ├── start.bat
+                    └── stop.bat
 ```
 
 ## 🔧 Configuration
@@ -54,7 +61,8 @@ potential-talents/├── app/│   ├── app.py│   └── requiremen
 1. Create a `.env` file with your API keys (optional):
 
 ```
-GROQ_API_KEY=your_groq_api_keyHUGGINGFACE_API_KEY=your_huggingface_api_key
+GROQ_API_KEY=your_groq_api_key
+HUGGINGFACE_API_KEY=your_huggingface_api_key
 ```
 
 1. Configure Docker resources in Docker Desktop settings
@@ -95,11 +103,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Authors
 
-- Your Name - Initial work - [YourGitHub](https://github.com/yourusername)
+- Abdelaaziz Bellout - Initial work - [Bellapp](https://github.com/bellapp)
 
 ## 🙏 Acknowledgments
 
-- Anthropic's Claude for AI assistance
 - Ollama team for the local model support
 - Streamlit team for the amazing framework
 
@@ -109,4 +116,4 @@ For support, please open an issue in the GitHub repository or contact the mainta
 
 ---
 
-Made with ❤️ by [Your Name]
+Made with ❤️ by [Abdelaaziz Bellout]
