@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  streamlit:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.streamlit
+    container_name: job_similarity_streamlit
+    ports:
+      - "8501:8501"
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - HUGGINGFACE_API_KEY=${HUGGINGFACE_API_KEY}
+    depends_on:
+      - ollama
+    networks:
+      - job_similarity_network
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: job_similarity_ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - job_similarity_network
+    deploy:
+      resources:
+        limits:
+          memory: 8G
+
+networks:
+  job_similarity_network:
+    name: job_similarity_network
+
+volumes:
+  ollama_data:
+    name: job_similarity_ollama_data
